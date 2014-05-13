@@ -4,8 +4,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,13 +19,17 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] views = {"LinearLayout", "RelativeLayout", "TableLayout", "DatePicker",
-                "TimePicker", "FormStuff", "Spinner", "AutoComplete", "ListView", "GridView",
-                "Gallery", "TabWidget", "MapView", "WebView"};
+        List<String> views = ViewKind.getNames();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, views);
 
         ListView lv =(ListView)findViewById(R.id.listView);
         lv.setAdapter(adapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+        });
     }
 
 
