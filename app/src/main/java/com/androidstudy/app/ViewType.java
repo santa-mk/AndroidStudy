@@ -22,6 +22,7 @@ public enum ViewType {
     MAP_VIEW("MapView"),
     WEB_VIEW("WebView"),
     PREFERENCE("Preference"),
+    SQ_LITE("SQLite"),
     UNKNOWN("Unknown");
 
     private final String name;

@@ -7,5 +7,7 @@
     <string name="title_activity_table_layout">TableLayout</string>
     <string name="title_activity_date_picker">DatePicker</string>
     <string name="title_activity_preference">Preference</string>
+    <string name="title_activity_sqlite">SQLite</string>
+    <string name="sqlite">SQLite page</string>
 
 </resources>

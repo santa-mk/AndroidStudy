@@ -28,6 +28,10 @@
             android:name="com.androidstudy.app.Preference"
             android:label="@string/title_activity_preference" >
         </activity>
+        <activity
+            android:name="com.androidstudy.app.SQLite"
+            android:label="@string/title_activity_sqlite" >
+        </activity>
     </application>
 
 </manifest>

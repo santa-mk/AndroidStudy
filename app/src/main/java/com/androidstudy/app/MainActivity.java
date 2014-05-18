@@ -49,6 +49,8 @@ public class MainActivity extends ActionBarActivity {
                 return new Intent(MainActivity.this, DatePicker.class);
             case PREFERENCE:
                 return new Intent(MainActivity.this, Preference.class);
+            case SQ_LITE:
+                return new Intent(MainActivity.this, SQLite.class);
             default:
                 Log.d(TAG, name + "layout is not implemented.");
         }
