@@ -1,12 +1,15 @@
 package com.androidstudy.app;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 
 public class SQLite extends ActionBarActivity {
@@ -15,8 +18,26 @@ public class SQLite extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sqlite);
+
+        ListView pokemonList = (ListView) findViewById(R.id.listView_sqlite);
+        loadListData(pokemonList, "SELECT id, name FROM pokemon");
     }
 
+    private void loadListData(ListView v, String sql) {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1);
+        v.setAdapter(adapter);
+
+        // database transaction
+        MySQLiteHelper helper = new MySQLiteHelper(this);
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor c = db.rawQuery(sql, null);
+        c.moveToFirst();
+        for (int i = 0; i < c.getCount(); i++) {
+            adapter.add(c.getString(0) + " : " + c.getString(1));
+            c.moveToNext();
+        }
+        c.close();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
