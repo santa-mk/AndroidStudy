@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Kosuke.Mita on 2014/05/14.
  */
-public enum ViewKind {
+public enum ViewType {
     LINEAR_LAYOUT("LinearLayout"),
     RELATIVE_LAYOUT("RelativeLayout"),
     TABLE_LAYOUT("TableLayout"),
@@ -24,7 +24,7 @@ public enum ViewKind {
 
     private final String name;
 
-    private ViewKind(String name) {
+    private ViewType(String name) {
         this.name = name;
     }
 
@@ -34,10 +34,9 @@ public enum ViewKind {
 
     public static List<String> getNames() {
        List<String> lists = new ArrayList<String>();
-        for(ViewKind kind : ViewKind.values()) {
-            lists.add(kind.getName());
+        for(ViewType type : ViewType.values()) {
+            lists.add(type.getName());
         }
-
         return lists;
     }
 }

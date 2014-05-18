@@ -20,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<String> views = ViewKind.getNames();
+        List<String> views = ViewType.getNames();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, views);
 
         ListView lv =(ListView)findViewById(R.id.listView);
