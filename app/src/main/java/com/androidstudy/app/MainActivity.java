@@ -41,15 +41,16 @@ public class MainActivity extends ActionBarActivity {
     private Intent getIntent(String name) {
         Log.d(TAG, "name@Intent : " + name);
         ViewType type = ViewType.getType(name);
-        Intent intent = null;
+
         switch (type) {
             case TABLE_LAYOUT:
-                intent = new Intent(MainActivity.this, TableLayout.class);
-                break;
+                return new Intent(MainActivity.this, TableLayout.class);
+            case DATE_PICKER:
+                return new Intent(MainActivity.this, DatePicker.class);
             default:
                 Log.d(TAG, name + "layout is not implemented.");
         }
-        return intent;
+        return null;
     }
 
     @Override

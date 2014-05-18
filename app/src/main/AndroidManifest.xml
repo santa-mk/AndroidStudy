@@ -20,6 +20,10 @@
             android:name="com.androidstudy.app.TableLayout"
             android:label="@string/title_activity_table_layout" >
         </activity>
+        <activity
+            android:name="com.androidstudy.app.DatePicker"
+            android:label="@string/title_activity_date_picker" >
+        </activity>
     </application>
 
 </manifest>
