@@ -21,6 +21,7 @@ public enum ViewType {
     TAB_WIDGET("TabWidget"),
     MAP_VIEW("MapView"),
     WEB_VIEW("WebView"),
+    PREFERENCE("Preference"),
     UNKNOWN("Unknown");
 
     private final String name;

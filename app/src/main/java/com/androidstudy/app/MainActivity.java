@@ -47,6 +47,8 @@ public class MainActivity extends ActionBarActivity {
                 return new Intent(MainActivity.this, TableLayout.class);
             case DATE_PICKER:
                 return new Intent(MainActivity.this, DatePicker.class);
+            case PREFERENCE:
+                return new Intent(MainActivity.this, Preference.class);
             default:
                 Log.d(TAG, name + "layout is not implemented.");
         }
