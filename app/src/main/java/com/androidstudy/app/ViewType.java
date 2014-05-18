@@ -20,7 +20,8 @@ public enum ViewType {
     GARALLEY("Gallery"),
     TAB_WIDGET("TabWidget"),
     MAP_VIEW("MapView"),
-    WEB_VIEW("WebView");
+    WEB_VIEW("WebView"),
+    UNKNOWN("Unknown");
 
     private final String name;
 
@@ -37,6 +38,17 @@ public enum ViewType {
         for(ViewType type : ViewType.values()) {
             lists.add(type.getName());
         }
+        lists.remove(UNKNOWN.getName());
         return lists;
+    }
+
+    public static ViewType getType(String name) {
+        for (ViewType type : ViewType.values()) {
+            if(name.equals(type.getName())) {
+                return type;
+            }
+        }
+
+        return UNKNOWN;
     }
 }
