@@ -2,30 +2,35 @@ package com.androidstudy.app;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.Calendar;
 
 
-public class DatePicker extends ActionBarActivity {
+public class DatePicker extends ActionBarActivity implements View.OnClickListener{
+    private static final String TAG = DatePicker.class.getSimpleName();
     private Activity mActivity;
-    DatePickerDialog mDialog;
+    android.widget.DatePicker mDatePicker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         mActivity = this;
+        mDatePicker = (android.widget.DatePicker) findViewById(R.id.datePicker);
         setContentView(R.layout.activity_date_picker);
+        setListeners();
         showDialog();
     }
-
 
     private void showDialog() {
         DatePickerDialog.OnDateSetListener mListener = new DatePickerDialog.OnDateSetListener() {
@@ -62,5 +67,27 @@ public class DatePicker extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setListeners() {
+        ToggleButton toggleCalendar = (ToggleButton) findViewById(R.id.toggle_calendar);
+        toggleCalendar.setOnClickListener(this);
+        ToggleButton toggleSpinner = (ToggleButton) findViewById(R.id.toggle_spinner);
+        toggleSpinner.setOnClickListener(this);
+    }
+
+    // TODO: mDatePicker is now null.
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.toggle_spinner:
+                // mDatePicker.setSpinnersShown(((ToggleButton)v).isChecked());
+                break;
+            case R.id.toggle_calendar:
+                // mDatePicker.setCalendarViewShown(((ToggleButton)v).isChecked());
+                break;
+            default:
+                break;
+        }
     }
 }

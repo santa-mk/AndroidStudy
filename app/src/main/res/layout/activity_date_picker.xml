@@ -25,4 +25,22 @@
         android:layout_below="@+id/datePicker"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="SpinnerOn"
+        android:textOff="SpinnerOff"
+        android:id="@+id/toggle_spinner"
+        android:layout_below="@+id/text_input"
+        android:layout_centerHorizontal="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="CalendarOn"
+        android:textOff="CalendarOff"
+        android:id="@+id/toggle_calendar"
+        android:layout_below="@+id/toggle_spinner"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
