@@ -3,6 +3,7 @@ package com.androidstudy.app;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +15,7 @@ import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +30,27 @@ public class MainActivity extends ActionBarActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(MainActivity.this, TableLayout.class);
-                startActivity(intent);
+                Intent intent = getIntent((String)adapterView.getAdapter().getItem(i));
+                if (intent != null) {
+                    startActivity(intent);
+                }
             }
         });
     }
 
+    private Intent getIntent(String name) {
+        Log.d(TAG, "name@Intent : " + name);
+        ViewType type = ViewType.getType(name);
+        Intent intent = null;
+        switch (type) {
+            case TABLE_LAYOUT:
+                intent = new Intent(MainActivity.this, TableLayout.class);
+                break;
+            default:
+                Log.d(TAG, name + "layout is not implemented.");
+        }
+        return intent;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
