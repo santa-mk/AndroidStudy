@@ -9,5 +9,6 @@
     <string name="title_activity_preference">Preference</string>
     <string name="title_activity_sqlite">SQLite</string>
     <string name="sqlite">SQLite page</string>
+    <string name="title_activity_content_provider">ContentProviderActivity</string>
 
 </resources>

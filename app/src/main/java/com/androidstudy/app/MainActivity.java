@@ -51,6 +51,8 @@ public class MainActivity extends ActionBarActivity {
                 return new Intent(MainActivity.this, Preference.class);
             case SQ_LITE:
                 return new Intent(MainActivity.this, SQLite.class);
+            case CONTENT_PROVIDER:
+                return new Intent(MainActivity.this, ContentProviderActivity.class);
             default:
                 Log.d(TAG, name + "layout is not implemented.");
         }

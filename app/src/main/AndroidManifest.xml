@@ -32,6 +32,12 @@
             android:name="com.androidstudy.app.SQLite"
             android:label="@string/title_activity_sqlite" >
         </activity>
+        <activity
+            android:name="com.androidstudy.app.ContentProviderActivity"
+            android:label="@string/title_activity_content_provider" >
+        </activity>
     </application>
 
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    
 </manifest>

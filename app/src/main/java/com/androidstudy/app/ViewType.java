@@ -23,6 +23,7 @@ public enum ViewType {
     WEB_VIEW("WebView"),
     PREFERENCE("Preference"),
     SQ_LITE("SQLite"),
+    CONTENT_PROVIDER("ContentProvider"),
     UNKNOWN("Unknown");
 
     private final String name;
