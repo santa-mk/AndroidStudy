@@ -53,6 +53,8 @@ public class MainActivity extends ActionBarActivity {
                 return new Intent(MainActivity.this, SQLite.class);
             case CONTENT_PROVIDER:
                 return new Intent(MainActivity.this, ContentProviderActivity.class);
+            case DRAG:
+                return new Intent(MainActivity.this, DragActivity.class);
             default:
                 Log.d(TAG, name + "layout is not implemented.");
         }

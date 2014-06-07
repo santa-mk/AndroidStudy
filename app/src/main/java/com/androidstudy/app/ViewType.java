@@ -24,6 +24,7 @@ public enum ViewType {
     PREFERENCE("Preference"),
     SQ_LITE("SQLite"),
     CONTENT_PROVIDER("ContentProvider"),
+    DRAG("Drag"),
     UNKNOWN("Unknown");
 
     private final String name;
