@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\功輔\Apps\MyApplication\app\build\intermediates\pre-dexed\debug\support-v4-19.0.1-b8de3d647f35406634b6f4316b72c2b38c9f387f.jar"
+        jar="C:\Users\功輔\AppData\Local\Android\android-studio1\sdk\extras\android\m2repository\com\android\support\support-v4\19.0.1\support-v4-19.0.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="587da9a481ffd341d2fa091704489b89845ddacd"/>
+    <item
+        dex="C:\Users\功輔\Apps\MyApplication\app\build\intermediates\pre-dexed\debug\classes-bf0f69d10c8d203322fa51e3f8d4748eb05e453e.jar"
+        jar="C:\Users\功輔\Apps\MyApplication\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.0.1\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f71a6822470c9eb659d4f4a6cb57b780b35f058b"/>
+    <item
+        dex="C:\Users\功輔\Apps\MyApplication\app\build\intermediates\pre-dexed\debug\classes-7c45836de03c2a47c95690d1ff0d1cbffb7f467e.jar"
+        jar="C:\Users\功輔\Apps\MyApplication\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\19.0.1\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b1701c49371231e0423b7588539f24bdab485019"/>
+
+</pre-dex-items>
